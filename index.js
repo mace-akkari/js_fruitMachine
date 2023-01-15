@@ -16,11 +16,12 @@ function game() {
 
 function render(reels) {
   const target = document.querySelector("ol");
-  const fragment = document.createFragment();
+  const fragment = document.createDocumentFragment();
   for (const reel of reels) {
     const li = document.createElement("li");
     li.textContent = reel;
     fragment.append(li);
+    console.log(li);
   }
 }
 
@@ -49,3 +50,5 @@ function play() {
 function main() {
   document.querySelector("button").addEventListener("click", play);
 }
+
+main();
