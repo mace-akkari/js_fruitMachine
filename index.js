@@ -3,6 +3,8 @@ const RESULT = {
   LOSS: 0,
 };
 
+const SYMBOLS = ["🍒", "💵", "🍇"];
+
 // found on mdn
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -19,7 +21,7 @@ function render(reels) {
   const fragment = document.createDocumentFragment();
   for (const reel of reels) {
     const li = document.createElement("li");
-    li.textContent = reel;
+    li.textContent = SYMBOLS[reel];
     fragment.append(li);
     console.log(li);
   }
